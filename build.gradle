@@ -128,13 +128,13 @@ publishing {
                 def root = asNode()
                 root.appendNode('name', 'Gradle Tomcat plugin')
                 root.appendNode('description', 'Gradle plugin supporting deployment of your web application to an embedded Tomcat web container.')
-                root.appendNode('url', 'https://github.com/bmuschko/gradle-tomcat-plugin')
+                root.appendNode('url', 'https://github.com/jcdeoferio/gradle-tomcat-plugin')
                 root.appendNode('inceptionYear', '2010')
 
                 def scm = root.appendNode('scm')
-                scm.appendNode('url', 'https://github.com/bmuschko/gradle-tomcat-plugin')
-                scm.appendNode('connection', 'scm:https://bmuschko@github.com/bmuschko/gradle-tomcat-plugin.git')
-                scm.appendNode('developerConnection', 'scm:git://github.com/bmuschko/gradle-tomcat-plugin.git')
+                scm.appendNode('url', 'https://github.com/jcdeoferio/gradle-tomcat-plugin')
+                scm.appendNode('connection', 'scm:https://jcdeoferio@github.com/jcdeoferio/gradle-tomcat-plugin.git')
+                scm.appendNode('developerConnection', 'scm:git://github.com/jcdeoferio/gradle-tomcat-plugin.git')
 
                 def license = root.appendNode('licenses').appendNode('license')
                 license.appendNode('name', 'The Apache Software License, Version 2.0')
