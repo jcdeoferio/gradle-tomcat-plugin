@@ -27,7 +27,7 @@ class TomcatPluginFunctionalTest extends AbstractFunctionalTest {
     def setup() {
         buildFile << """
             plugins {
-                id 'com.bmuschko.tomcat'
+                id 'com.jcdeoferio.gradle-tomcat-plugin.tomcat'
             }
 
             [tomcatRun, tomcatRunWar]*.daemon = true

@@ -18,7 +18,7 @@ class TomcatJasperFunctionalTest extends AbstractFunctionalTest {
     def setup() {
         buildFile << """
             plugins {
-                id 'com.bmuschko.tomcat'
+                id 'com.jcdeoferio.gradle-tomcat-plugin.tomcat'
             }
         """
         buildFile << basicBuildScript()

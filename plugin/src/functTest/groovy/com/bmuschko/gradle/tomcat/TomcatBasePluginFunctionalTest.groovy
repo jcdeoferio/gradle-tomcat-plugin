@@ -22,7 +22,7 @@ class TomcatBasePluginFunctionalTest extends AbstractFunctionalTest {
     def setup() {
         buildFile << """
             plugins {
-                id 'com.bmuschko.tomcat-base'
+                id 'com.jcdeoferio.gradle-tomcat-plugin.tomcat-base'
             }
         """
         buildFile << basicBuildScript()
