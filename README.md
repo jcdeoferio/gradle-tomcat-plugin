@@ -47,7 +47,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.bmuschko:gradle-tomcat-plugin:2.5'
+        classpath 'com.jcdeoferio.gradle-tomcat-plugin:gradle-tomcat-plugin:2.5.3'
     }
 }
 ```
@@ -81,14 +81,14 @@ The `com.bmuschko.tomcat` plugin helps you get started quickly. If you are OK if
 preferrable option. Most plugin users will go with this option. To use the Tomcat plugin, include the following code snippet
 in your build script:
 
-    apply plugin: 'com.bmuschko.tomcat'
+    apply plugin: 'com.jcdeoferio.gradle-tomcat-plugin.tomcat'
 
 If you need full control over your tasks or don't want to go with the preconfigured tasks, you will want to use the `com.bmuschko.tomcat-base`
 plugin. That might be the case if you want to set up the container solely for functional testing. The downside is that each task
 has to be configured individually in your build script. To use the Tomcat base plugin, include the following code snippet
 in your build script:
 
-    apply plugin: 'com.bmuschko.tomcat-base'
+    apply plugin: 'com.jcdeoferio.gradle-tomcat-plugin.tomcat-base'
 
 ### Assigning the Tomcat libraries
 
@@ -187,7 +187,7 @@ tomcat {
 
 ## Tasks
 
-The `com.bmuschko.tomcat` plugin pre-defines the following tasks out-of-the-box:
+The `com.jcdeoferio.gradle-tomcat-plugin.tomcat` plugin pre-defines the following tasks out-of-the-box:
 
 <table>
     <tr>
@@ -199,25 +199,25 @@ The `com.bmuschko.tomcat` plugin pre-defines the following tasks out-of-the-box:
     <tr>
         <td>tomcatRun</td>
         <td>-</td>
-        <td><a href="http://bmuschko.github.io/gradle-tomcat-plugin/docs/groovydoc/com/bmuschko/gradle/tomcat/tasks/TomcatRun.html">TomcatRun</a></td>
+        <td><a href="http://jcdeoferio.github.io/gradle-tomcat-plugin/docs/groovydoc/com/bmuschko/gradle/tomcat/tasks/TomcatRun.html">TomcatRun</a></td>
         <td>Starts a Tomcat instance and deploys the exploded web application to it.</td>
     </tr>
     <tr>
         <td>tomcatRunWar</td>
         <td>-</td>
-        <td><a href="http://bmuschko.github.io/gradle-tomcat-plugin/docs/groovydoc/com/bmuschko/gradle/tomcat/tasks/TomcatRunWar.html">TomcatRunWar</a></td>
+        <td><a href="http://jcdeoferio.github.io/gradle-tomcat-plugin/docs/groovydoc/com/bmuschko/gradle/tomcat/tasks/TomcatRunWar.html">TomcatRunWar</a></td>
         <td>Starts a Tomcat instance and deploys the WAR to it.</td>
     </tr>
     <tr>
         <td>tomcatStop</td>
         <td>-</td>
-        <td><a href="http://bmuschko.github.io/gradle-tomcat-plugin/docs/groovydoc/com/bmuschko/gradle/tomcat/tasks/TomcatStop.html">TomcatStop</a></td>
+        <td><a href="http://jcdeoferio.github.io/gradle-tomcat-plugin/docs/groovydoc/com/bmuschko/gradle/tomcat/tasks/TomcatStop.html">TomcatStop</a></td>
         <td>Stops the Tomcat instance.</td>
     </tr>
     <tr>
         <td>tomcatJasper</td>
         <td>-</td>
-        <td><a href="http://bmuschko.github.io/gradle-tomcat-plugin/docs/groovydoc/com/bmuschko/gradle/tomcat/tasks/TomcatJasper.html">TomcatJasper</a></td>
+        <td><a href="http://jcdeoferio.github.io/gradle-tomcat-plugin/docs/groovydoc/com/bmuschko/gradle/tomcat/tasks/TomcatJasper.html">TomcatJasper</a></td>
         <td>Runs the JSP compiler and turns JSP pages into Java source using <a href="http://tomcat.apache.org/tomcat-7.0-doc/jasper-howto.html">Jasper</a>.</td>
     </tr>
 </table>
@@ -520,7 +520,7 @@ thread and shut it down once your tests are done. The following example demonstr
 functionality. Of course this is only one way of doing it. The following example requires Gradle >= 1.7:
 
 ```groovy
-apply plugin: 'com.bmuschko.tomcat-base'
+apply plugin: 'com.jcdeoferio.gradle-tomcat-plugin.tomcat-base'
 
 ext {
     tomcatStopPort = 8081
