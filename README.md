@@ -1,4 +1,4 @@
-# Gradle Tomcat plugin [![Build Status](https://travis-ci.org/bmuschko/gradle-tomcat-plugin.svg?branch=master)](https://travis-ci.org/bmuschko/gradle-tomcat-plugin)
+# Gradle Tomcat plugin [![Build Status](https://travis-ci.org/jcdeoferio/gradle-tomcat-plugin.svg?branch=feature%2F2.5.1-jspFiles-parameter)](https://travis-ci.org/jcdeoferio/gradle-tomcat-plugin)
 
 ![Tomcat Logo](http://tomcat.apache.org/res/images/tomcat.png)
 
@@ -37,7 +37,7 @@ To use the plugin's functionality, you will need to add the its binary artifact 
 ### Adding the plugin binary to the build
 
 The plugin JAR needs to be defined in the classpath of your build script. It is directly available on
-[Bintray](https://bintray.com/bmuschko/gradle-plugins/com.bmuschko%3Agradle-tomcat-plugin).
+[Bintray](https://bintray.com/jcdeoferio/gradle-tomcat-plugin/com.jcdeoferio.gradle-tomcat-plugin%3Agradle-tomcat-plugin).
 The following code snippet shows an example on how to retrieve it from Bintray:
 
 ```groovy
@@ -64,26 +64,26 @@ The JAR file comes with two plugins:
         <th>Description</th>
     </tr>
     <tr>
-        <td>com.bmuschko.tomcat-base</td>
+        <td>com.jcdeoferio.gradle-tomcat-plugin.tomcat-base</td>
         <td>-</td>
-        <td><a href="http://bmuschko.github.io/gradle-tomcat-plugin/docs/groovydoc/com/bmuschko/gradle/tomcat/TomcatBasePlugin.html">TomcatBasePlugin</a></td>
+        <td><a href="http://jcdeoferio.github.io/gradle-tomcat-plugin/docs/groovydoc/com/bmuschko/gradle/tomcat/TomcatBasePlugin.html">TomcatBasePlugin</a></td>
         <td>Provides Tomcat custom task types, pre-configures classpath.</td>
     </tr>
     <tr>
-        <td>com.bmuschko.tomcat</td>
-        <td>com.bmuschko.tomcat-base</td>
-        <td><a href="http://bmuschko.github.io/gradle-tomcat-plugin/docs/groovydoc/com/bmuschko/gradle/tomcat/TomcatPlugin.html">TomcatPlugin</a></td>
+        <td>com.jcdeoferio.gradle-tomcat-plugin.tomcat</td>
+        <td>com.jcdeoferio.gradle-tomcat-plugin.tomcat-base</td>
+        <td><a href="http://jcdeoferio.github.io/gradle-tomcat-plugin/docs/groovydoc/com/bmuschko/gradle/tomcat/TomcatPlugin.html">TomcatPlugin</a></td>
         <td>Provides tasks for starting and stopping an embedded Tomcat container and exposes extension named <code>tomcat</code>.</td>
     </tr>
 </table>
 
-The `com.bmuschko.tomcat` plugin helps you get started quickly. If you are OK if the preconfigured tasks, this is the
+The `com.jcdeoferio.gradle-tomcat-plugin.tomcat` plugin helps you get started quickly. If you are OK if the preconfigured tasks, this is the
 preferrable option. Most plugin users will go with this option. To use the Tomcat plugin, include the following code snippet
 in your build script:
 
     apply plugin: 'com.jcdeoferio.gradle-tomcat-plugin.tomcat'
 
-If you need full control over your tasks or don't want to go with the preconfigured tasks, you will want to use the `com.bmuschko.tomcat-base`
+If you need full control over your tasks or don't want to go with the preconfigured tasks, you will want to use the `com.jcdeoferio.gradle-tomcat-plugin.tomcat-base`
 plugin. That might be the case if you want to set up the container solely for functional testing. The downside is that each task
 has to be configured individually in your build script. To use the Tomcat base plugin, include the following code snippet
 in your build script:
